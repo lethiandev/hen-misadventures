@@ -1,0 +1,39 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://levels/level_base/level_base.tscn" type="PackedScene" id=1]
+[ext_resource path="res://levels/level1/level1.gd" type="Script" id=2]
+[ext_resource path="res://levels/level1/entrance.wav" type="AudioStream" id=3]
+[ext_resource path="res://tilesets/mother_ship/mother_ship.tres" type="TileSet" id=4]
+[ext_resource path="res://aliens/beam/beam.tscn" type="PackedScene" id=5]
+[ext_resource path="res://collectables/exit/exit.tscn" type="PackedScene" id=6]
+[ext_resource path="res://collectables/key/key.tscn" type="PackedScene" id=7]
+[ext_resource path="res://player/player.tscn" type="PackedScene" id=8]
+
+[node name="Level1" index="0" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+title = "Entrance - First Contact"
+hint = "Use arrow keys to move around"
+next_level = "res://levels/level2/level2.tscn"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="0"]
+stream = ExtResource( 3 )
+
+[node name="TileMap" parent="." index="1"]
+tile_set = ExtResource( 4 )
+tile_data = PoolIntArray( 393225, 0, 196613, 393226, 0, 131073, 393227, 0, 131073, 393228, 0, 131073, 393229, 0, 131073, 393230, 0, 196612, 393231, 0, 65537, 393232, 0, 65537, 393233, 0, 196613, 393234, 0, 131073, 393235, 0, 131073, 393236, 0, 131073, 393237, 0, 131073, 393238, 0, 196612, 458761, 0, 65538, 458766, 0, 65536, 458767, 0, 65537, 458768, 0, 65537, 458769, 0, 65538, 458774, 0, 65536, 524297, 0, 65538, 524302, 0, 131072, 524303, 0, 131073, 524304, 0, 131073, 524305, 0, 131074, 524310, 0, 65536, 589833, 0, 65538, 589846, 0, 65536, 655369, 0, 65538, 655382, 0, 65536, 720905, 0, 65538, 720918, 0, 65536, 786441, 0, 131077, 786442, 0, 1, 786443, 0, 1, 786444, 0, 1, 786445, 0, 1, 786446, 0, 1, 786447, 0, 1, 786448, 0, 1, 786449, 0, 1, 786450, 0, 1, 786451, 0, 1, 786452, 0, 1, 786453, 0, 1, 786454, 0, 131076 )
+
+[node name="Beam" parent="TileMap" index="0" instance=ExtResource( 5 )]
+position = Vector2( 256, 144 )
+monitoring = false
+monitorable = false
+length = 48.0
+
+[node name="Exit" parent="TileMap" index="1" instance=ExtResource( 6 )]
+position = Vector2( 174, 176 )
+
+[node name="Key" parent="TileMap" index="2" instance=ExtResource( 7 )]
+position = Vector2( 338, 183 )
+
+[node name="Player" parent="TileMap" index="3" instance=ExtResource( 8 )]
+position = Vector2( 256, 171 )
+

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/pickup.wav-475327dac7f24f45b56245a2d13bff0a.sample"
+
+[deps]
+
+source_file="res://collectables/key/pickup.wav"
+dest_files=[ "res://.import/pickup.wav-475327dac7f24f45b56245a2d13bff0a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

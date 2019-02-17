@@ -1,0 +1,508 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://levels/level_base/level_base.tscn" type="PackedScene" id=1]
+[ext_resource path="res://levels/intro/intro.gd" type="Script" id=2]
+[ext_resource path="res://aliens/mother_ship/mother_ship.tscn" type="PackedScene" id=3]
+[ext_resource path="res://aliens/beam/beam.tscn" type="PackedScene" id=4]
+[ext_resource path="res://collectables/egg/egg.png" type="Texture" id=5]
+[ext_resource path="res://tilesets/fields/fields.tres" type="TileSet" id=6]
+[ext_resource path="res://player/player.tscn" type="PackedScene" id=7]
+[ext_resource path="res://player/player.png" type="Texture" id=8]
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array( -162.902, -49.685, 162.902, 49.685, -323, 38, -109.144, -0.814509, 109.144, 0.814509, 254, 124, 13.0321, 35.0239, -13.0321, -35.0239, 348, 36, 215.03, -51.3141, -215.03, 51.3141, -327, -71 )
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "intro"
+length = 11.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Path2D/PathFollow2D:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2, 8.5, 11 ),
+"transitions": PoolRealArray( 1, 0.287175, 1, 3.13834, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 586.0, 586.0, 1438.9 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Path2D/PathFollow2D/MotherShip/Beam:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2.3, 8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Eggs/Egg1:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 3, 3.5, 4.3, 4.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -4, 54 ), Vector2( -4, 54 ), Vector2( -4, 0 ), Vector2( -4, 54 ), Vector2( -4, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Eggs/Egg1:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 3, 3.5, 4.3, 4.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ true, true, false, true, false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Eggs/Egg2:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 3.1, 3.7, 4.4, 5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 5, 54 ), Vector2( 5, 54 ), Vector2( 5, 0 ), Vector2( 5, 54 ), Vector2( 5, 0 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Eggs/Egg2:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 3.1, 3.7, 4.4, 4.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ true, true, false, true, false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Eggs/Egg3:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 3.4, 3.9, 4.6, 5.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 54 ), Vector2( 1, 54 ), Vector2( 1, 0 ), Vector2( 1, 54 ), Vector2( 1, 0 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Eggs/Egg3:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 3.4, 3.9, 4.6, 5.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ true, true, false, true, false ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Eggs/Egg4:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 3.5, 3.9, 4.8, 5.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -6, 54 ), Vector2( -6, 54 ), Vector2( -6, 0 ), Vector2( -6, 54 ), Vector2( -6, 0 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Eggs/Egg4:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 3.5, 3.9, 4.8, 5.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ true, true, false, true, false ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Eggs/Egg5:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 3.6, 4.3, 5, 5.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 2, 54 ), Vector2( 2, 54 ), Vector2( 2, 0 ), Vector2( 2, 54 ), Vector2( 2, 0 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Eggs/Egg5:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 3.6, 4.3, 5, 5.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ true, true, false, true, false ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Eggs/Egg6:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0, 3.7, 4.1, 5.2, 5.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 6, 54 ), Vector2( 6, 54 ), Vector2( 6, 0 ), Vector2( 6, 54 ), Vector2( 6, 0 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Eggs/Egg6:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 3.7, 4.1, 5.2, 5.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ true, true, false, true, false ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Eggs/Egg7:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 3.8, 4.2, 5.3, 5.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 54 ), Vector2( 0, 54 ), Vector2( 0, 0 ), Vector2( 0, 54 ), Vector2( 0, 0 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("Eggs/Egg7:visible")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0, 3.8, 4.2, 5.3, 5.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ true, true, false, true, false ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("Eggs/Egg8:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0, 4, 4.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -4, 54 ), Vector2( -4, 54 ), Vector2( -4, 0 ) ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("Eggs/Egg8:visible")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 0, 4, 4.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, true, false ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath("Eggs/Egg9:position")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 0, 4.1, 4.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 5, 54 ), Vector2( 5, 54 ), Vector2( 5, 0 ) ]
+}
+tracks/19/type = "value"
+tracks/19/path = NodePath("Eggs/Egg9:visible")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/keys = {
+"times": PoolRealArray( 0, 4.1, 4.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, true, false ]
+}
+tracks/20/type = "value"
+tracks/20/path = NodePath("Hens/Hen1:position")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/keys = {
+"times": PoolRealArray( 0, 3.6, 3.7, 3.8, 3.9, 4.2, 4.3, 4.4, 4.6, 4.7, 4.8, 5.2, 5.3, 5.4, 6, 6.2, 6.3, 6.4, 7.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 248, 183 ), Vector2( 248, 183 ), Vector2( 232, 171 ), Vector2( 204, 200 ), Vector2( 193, 200 ), Vector2( 193, 200 ), Vector2( 193, 181 ), Vector2( 193, 200 ), Vector2( 193, 200 ), Vector2( 193, 180 ), Vector2( 193, 200 ), Vector2( 193, 200 ), Vector2( 193, 175 ), Vector2( 193, 200 ), Vector2( 193, 200 ), Vector2( 245, 200 ), Vector2( 245, 158 ), Vector2( 256, 153 ), Vector2( 256, 115 ) ]
+}
+tracks/21/type = "value"
+tracks/21/path = NodePath("Hens/Hen1:visible")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/keys = {
+"times": PoolRealArray( 0, 3.6, 7.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/22/type = "value"
+tracks/22/path = NodePath("Hens/Hen2:visible")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/keys = {
+"times": PoolRealArray( 0, 3.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/23/type = "value"
+tracks/23/path = NodePath("Hens/Hen2:position")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/keys = {
+"times": PoolRealArray( 0, 3.8, 3.9, 4, 4.1, 4.3, 4.4, 4.5, 4.8, 4.9, 5, 5.3, 5.4, 5.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 248, 183 ), Vector2( 248, 183 ), Vector2( 274, 173 ), Vector2( 288, 200 ), Vector2( 305, 200 ), Vector2( 305, 200 ), Vector2( 305, 170 ), Vector2( 305, 200 ), Vector2( 305, 200 ), Vector2( 305, 170 ), Vector2( 305, 200 ), Vector2( 305, 200 ), Vector2( 305.05, 165 ), Vector2( 305.05, 200 ) ]
+}
+tracks/24/type = "value"
+tracks/24/path = NodePath("Hens/Hen3:position")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/keys = {
+"times": PoolRealArray( 0, 4.1, 4.2, 4.3, 4.4, 4.9, 5, 5.1, 5.6, 5.7, 5.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 248, 183 ), Vector2( 248, 183 ), Vector2( 230, 171 ), Vector2( 219, 200 ), Vector2( 219, 200 ), Vector2( 219, 200 ), Vector2( 219, 170 ), Vector2( 219, 200 ), Vector2( 219, 200 ), Vector2( 219, 165 ), Vector2( 219, 200 ) ]
+}
+tracks/25/type = "value"
+tracks/25/path = NodePath("Hens/Hen3:visible")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/keys = {
+"times": PoolRealArray( 0, 4.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/26/type = "value"
+tracks/26/path = NodePath("Hens/Hen4:position")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/keys = {
+"times": PoolRealArray( 0, 4.3, 4.4, 4.5, 4.6, 5.1, 5.2, 5.3, 5.5, 5.6, 5.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 248, 183 ), Vector2( 248, 183 ), Vector2( 210, 172 ), Vector2( 176, 200 ), Vector2( 176, 200 ), Vector2( 176, 200 ), Vector2( 176, 160 ), Vector2( 176, 200 ), Vector2( 176, 200 ), Vector2( 176, 156 ), Vector2( 176, 200 ) ]
+}
+tracks/27/type = "value"
+tracks/27/path = NodePath("Hens/Hen4:visible")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/keys = {
+"times": PoolRealArray( 0, 4.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/28/type = "value"
+tracks/28/path = NodePath("Hens/Hen1:flip_h")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/keys = {
+"times": PoolRealArray( 0, 3.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/29/type = "value"
+tracks/29/path = NodePath("Hens/Hen2:flip_h")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/keys = {
+"times": PoolRealArray( 0, 4.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/30/type = "value"
+tracks/30/path = NodePath("Hens/Hen3:flip_h")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/keys = {
+"times": PoolRealArray( 0, 4.4, 10 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
+tracks/31/type = "value"
+tracks/31/path = NodePath("Hens/Hen4:flip_h")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/keys = {
+"times": PoolRealArray( 0, 4.6, 10 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
+
+[node name="Intro" index="0" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+title = "Somewhere in countryside"
+hint = "Midnight"
+next_level = "res://levels/level1/level1.tscn"
+
+[node name="Path2D" type="Path2D" parent="." index="0"]
+position = Vector2( 0, -31 )
+curve = SubResource( 1 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" index="0"]
+position = Vector2( -323, 38 )
+rotate = false
+
+[node name="MotherShip" parent="Path2D/PathFollow2D" index="0" instance=ExtResource( 3 )]
+
+[node name="Beam" parent="Path2D/PathFollow2D/MotherShip" index="2" instance=ExtResource( 4 )]
+visible = false
+position = Vector2( 0, 23 )
+monitoring = false
+monitorable = false
+length = 50.0
+
+[node name="Eggs" type="Node2D" parent="." index="1"]
+editor/display_folded = true
+position = Vector2( 256, 113 )
+
+[node name="Egg1" type="Sprite" parent="Eggs" index="0"]
+position = Vector2( -4, 54 )
+texture = ExtResource( 5 )
+
+[node name="Egg2" type="Sprite" parent="Eggs" index="1"]
+position = Vector2( 5, 54 )
+texture = ExtResource( 5 )
+
+[node name="Egg3" type="Sprite" parent="Eggs" index="2"]
+position = Vector2( 1, 54 )
+texture = ExtResource( 5 )
+
+[node name="Egg4" type="Sprite" parent="Eggs" index="3"]
+position = Vector2( -6, 54 )
+texture = ExtResource( 5 )
+
+[node name="Egg5" type="Sprite" parent="Eggs" index="4"]
+position = Vector2( 2, 54 )
+texture = ExtResource( 5 )
+
+[node name="Egg6" type="Sprite" parent="Eggs" index="5"]
+position = Vector2( 6, 54 )
+texture = ExtResource( 5 )
+
+[node name="Egg7" type="Sprite" parent="Eggs" index="6"]
+position = Vector2( 0, 54 )
+texture = ExtResource( 5 )
+
+[node name="Egg8" type="Sprite" parent="Eggs" index="7"]
+position = Vector2( -4, 54 )
+texture = ExtResource( 5 )
+
+[node name="Egg9" type="Sprite" parent="Eggs" index="8"]
+position = Vector2( 5, 54 )
+texture = ExtResource( 5 )
+
+[node name="TileMap" parent="." index="2"]
+editor/display_folded = true
+tile_set = ExtResource( 6 )
+tile_data = PoolIntArray( 655373, 1, 0, 655375, 3, 0, 655376, 3, 0, 655378, 536870913, 0, 720909, 5, 0, 720911, 536870916, 0, 720914, 536870917, 0, 786445, 5, 0, 786450, 536870917, 0, 851976, 0, 0, 851977, 0, 0, 851978, 0, 0, 851979, 0, 0, 851980, 0, 0, 851981, 0, 0, 851982, 0, 0, 851983, 0, 0, 851984, 0, 0, 851985, 0, 0, 851986, 0, 0, 851987, 0, 0, 851988, 0, 0, 851989, 0, 0, 851990, 0, 0, 851991, 0, 0 )
+
+[node name="Player" parent="TileMap" index="0" instance=ExtResource( 7 )]
+visible = false
+position = Vector2( 248, 183 )
+
+[node name="Hens" type="Node2D" parent="." index="3"]
+
+[node name="Hen1" type="Sprite" parent="Hens" index="0"]
+visible = false
+position = Vector2( 248, 183 )
+texture = ExtResource( 8 )
+flip_h = true
+hframes = 4
+
+[node name="Hen2" type="Sprite" parent="Hens" index="1"]
+visible = false
+position = Vector2( 248, 183 )
+texture = ExtResource( 8 )
+hframes = 4
+
+[node name="Hen3" type="Sprite" parent="Hens" index="2"]
+visible = false
+position = Vector2( 248, 183 )
+texture = ExtResource( 8 )
+flip_h = true
+hframes = 4
+
+[node name="Hen4" type="Sprite" parent="Hens" index="3"]
+visible = false
+position = Vector2( 248, 183 )
+texture = ExtResource( 8 )
+flip_h = true
+hframes = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="5"]
+anims/intro = SubResource( 2 )
+

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://levels/level_base/level_base.tscn" type="PackedScene" id=1]
+[ext_resource path="res://levels/gameover/gameover.gd" type="Script" id=2]
+
+[node name="GameOver" index="0" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+title = "Game Over"
+hint = "Press spacebar to play again"
+next_level = "res://levels/intro/intro.tscn"
+

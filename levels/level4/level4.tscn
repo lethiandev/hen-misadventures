@@ -1,0 +1,56 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://levels/level_base/level_base.tscn" type="PackedScene" id=1]
+[ext_resource path="res://tilesets/mother_ship/mother_ship.tres" type="TileSet" id=2]
+[ext_resource path="res://collectables/exit/exit.tscn" type="PackedScene" id=3]
+[ext_resource path="res://collectables/egg/egg.tscn" type="PackedScene" id=4]
+[ext_resource path="res://collectables/key/key.tscn" type="PackedScene" id=5]
+[ext_resource path="res://player/player.tscn" type="PackedScene" id=6]
+[ext_resource path="res://aliens/spikes/spikes.tscn" type="PackedScene" id=7]
+
+[node name="Level4" instance=ExtResource( 1 )]
+title = "Alien Laboratory #2"
+hint = "Use double jump to reach high platforms"
+next_level = "res://levels/level5/level5.tscn"
+
+[node name="TileMap" parent="." index="0"]
+editor/display_folded = true
+tile_set = ExtResource( 2 )
+tile_data = PoolIntArray( 196627, 0, 196613, 196628, 0, 131073, 196629, 0, 131073, 196630, 0, 131073, 196631, 0, 131073, 196632, 0, 196612, 262163, 0, 65538, 262168, 0, 65536, 327687, 0, 196613, 327688, 0, 131073, 327689, 0, 131073, 327690, 0, 131073, 327691, 0, 131073, 327692, 0, 131073, 327693, 0, 131073, 327694, 0, 131073, 327695, 0, 131073, 327696, 0, 131073, 327697, 0, 131073, 327698, 0, 131073, 327699, 0, 131074, 327704, 0, 65536, 393223, 0, 65538, 393238, 0, 327681, 393239, 0, 327682, 393240, 0, 196609, 458759, 0, 65538, 458776, 0, 65536, 524295, 0, 65538, 524312, 0, 65536, 589831, 0, 65538, 589848, 0, 65536, 655367, 0, 65538, 655384, 0, 65536, 720903, 0, 131077, 720904, 0, 1, 720905, 0, 1, 720906, 0, 1, 720907, 0, 2, 720916, 0, 0, 720917, 0, 1, 720918, 0, 1, 720919, 0, 1, 720920, 0, 131076, 786439, 0, 65537, 786440, 0, 65537, 786441, 0, 65537, 786442, 0, 65537, 786443, 0, 65538, 786452, 0, 65536, 786453, 0, 65537, 786454, 0, 65537, 786455, 0, 65537, 786456, 0, 65537, 851975, 0, 65537, 851976, 0, 65537, 851977, 0, 65537, 851978, 0, 65537, 851979, 0, 65538, 851988, 0, 65536, 851989, 0, 65537, 851990, 0, 65537, 851991, 0, 65537, 851992, 0, 65537, 917511, 0, 65537, 917512, 0, 65537, 917513, 0, 65537, 917514, 0, 65537, 917515, 0, 131077, 917516, 0, 1, 917517, 0, 1, 917518, 0, 1, 917519, 0, 1, 917520, 0, 1, 917521, 0, 1, 917522, 0, 1, 917523, 0, 1, 917524, 0, 131076, 917525, 0, 65537, 917526, 0, 65537, 917527, 0, 65537, 917528, 0, 65537 )
+
+[node name="Exit" parent="TileMap" index="0" instance=ExtResource( 3 )]
+position = Vector2( 370, 160 )
+
+[node name="Egg" parent="TileMap" index="1" instance=ExtResource( 4 )]
+position = Vector2( 256, 183 )
+
+[node name="Key" parent="TileMap" index="2" instance=ExtResource( 5 )]
+position = Vector2( 368, 88 )
+
+[node name="Player" parent="TileMap" index="3" instance=ExtResource( 6 )]
+position = Vector2( 150, 168 )
+
+[node name="Spikes" parent="TileMap" index="4" instance=ExtResource( 7 )]
+position = Vector2( 200, 220 )
+
+[node name="Spikes2" parent="TileMap" index="5" instance=ExtResource( 7 )]
+position = Vector2( 216, 220 )
+
+[node name="Spikes3" parent="TileMap" index="6" instance=ExtResource( 7 )]
+position = Vector2( 232, 220 )
+
+[node name="Spikes4" parent="TileMap" index="7" instance=ExtResource( 7 )]
+position = Vector2( 248, 220 )
+
+[node name="Spikes5" parent="TileMap" index="8" instance=ExtResource( 7 )]
+position = Vector2( 264, 220 )
+
+[node name="Spikes6" parent="TileMap" index="9" instance=ExtResource( 7 )]
+position = Vector2( 280, 220 )
+
+[node name="Spikes7" parent="TileMap" index="10" instance=ExtResource( 7 )]
+position = Vector2( 296, 220 )
+
+[node name="Spikes8" parent="TileMap" index="11" instance=ExtResource( 7 )]
+position = Vector2( 312, 220 )
+

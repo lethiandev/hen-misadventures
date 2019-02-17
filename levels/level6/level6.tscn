@@ -1,0 +1,56 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://levels/level_base/level_base.tscn" type="PackedScene" id=1]
+[ext_resource path="res://tilesets/mother_ship/mother_ship.tres" type="TileSet" id=2]
+[ext_resource path="res://collectables/egg/egg.tscn" type="PackedScene" id=3]
+[ext_resource path="res://collectables/key/key.tscn" type="PackedScene" id=4]
+[ext_resource path="res://collectables/exit/exit.tscn" type="PackedScene" id=5]
+[ext_resource path="res://player/player.tscn" type="PackedScene" id=6]
+[ext_resource path="res://aliens/spikes/spikes.tscn" type="PackedScene" id=7]
+
+[node name="Level6" instance=ExtResource( 1 )]
+title = "Alien Laboratory #4"
+hint = "I'm blue da ba dee da ba daa"
+next_level = "res://levels/level7/level7.tscn"
+
+[node name="TileMap" parent="." index="0"]
+tile_set = ExtResource( 2 )
+tile_data = PoolIntArray( 65546, 0, 0, 65547, 0, 1, 65548, 0, 1, 65549, 0, 1, 65550, 0, 1, 65551, 0, 1, 65552, 0, 1, 65553, 0, 1, 65554, 0, 1, 65555, 0, 1, 65556, 0, 1, 65557, 0, 1, 65558, 0, 1, 65559, 0, 2, 131082, 0, 65536, 131083, 0, 196613, 131084, 0, 131073, 131085, 0, 131073, 131086, 0, 131073, 131087, 0, 131073, 131088, 0, 131073, 131089, 0, 131073, 131090, 0, 131073, 131091, 0, 131073, 131092, 0, 131073, 131093, 0, 131073, 131094, 0, 196612, 131095, 0, 65538, 196618, 0, 65536, 196619, 0, 65538, 196630, 0, 65536, 196631, 0, 65538, 262154, 0, 65536, 262155, 0, 65538, 262166, 0, 65536, 262167, 0, 65538, 327690, 0, 65536, 327691, 0, 65538, 327694, 0, 0, 327695, 0, 1, 327696, 0, 1, 327697, 0, 2, 327700, 0, 0, 327701, 0, 1, 327702, 0, 131076, 327703, 0, 65538, 393226, 0, 65536, 393227, 0, 65538, 393230, 0, 131072, 393231, 0, 196612, 393232, 0, 65537, 393233, 0, 65538, 393236, 0, 65536, 393237, 0, 196613, 393238, 0, 131073, 393239, 0, 131074, 458762, 0, 65536, 458763, 0, 65538, 458767, 0, 65536, 458768, 0, 65537, 458769, 0, 65538, 458772, 0, 65536, 458773, 0, 65538, 524298, 0, 65536, 524299, 0, 65538, 524303, 0, 65536, 524304, 0, 65537, 524305, 0, 65538, 524308, 0, 65536, 524309, 0, 65538, 589834, 0, 65536, 589835, 0, 65538, 589838, 0, 0, 589839, 0, 131076, 589840, 0, 65537, 589841, 0, 196610, 589842, 0, 327683, 589844, 0, 65536, 589845, 0, 65538, 655370, 0, 65536, 655371, 0, 65538, 655374, 0, 65536, 655375, 0, 65537, 655376, 0, 65537, 655377, 0, 65538, 655380, 0, 65536, 655381, 0, 65538, 720906, 0, 65536, 720907, 0, 65538, 720910, 0, 131072, 720911, 0, 131075, 720912, 0, 131073, 720913, 0, 131074, 720916, 0, 65536, 720917, 0, 65538, 786442, 0, 65536, 786443, 0, 65538, 786447, 0, 393217, 786452, 0, 65536, 786453, 0, 65538, 851978, 0, 65536, 851979, 0, 65538, 851983, 0, 393217, 851988, 0, 65536, 851989, 0, 65538, 917514, 0, 65536, 917515, 0, 65538, 917518, 0, 0, 917519, 0, 196611, 917520, 0, 1, 917521, 0, 2, 917524, 0, 65536, 917525, 0, 65538, 983050, 0, 65536, 983051, 0, 131077, 983052, 0, 1, 983053, 0, 1, 983054, 0, 131076, 983055, 0, 65537, 983056, 0, 65537, 983057, 0, 131077, 983058, 0, 1, 983059, 0, 1, 983060, 0, 131076, 983061, 0, 65538, 1048586, 0, 131072, 1048587, 0, 131073, 1048588, 0, 131073, 1048589, 0, 131073, 1048590, 0, 131073, 1048591, 0, 131073, 1048592, 0, 131073, 1048593, 0, 131073, 1048594, 0, 131073, 1048595, 0, 131073, 1048596, 0, 131073, 1048597, 0, 131074 )
+
+[node name="Egg" parent="TileMap" index="0" instance=ExtResource( 3 )]
+position = Vector2( 296, 124 )
+
+[node name="Egg2" parent="TileMap" index="1" instance=ExtResource( 3 )]
+position = Vector2( 200, 220 )
+
+[node name="Egg3" parent="TileMap" index="2" instance=ExtResource( 3 )]
+position = Vector2( 312, 220 )
+
+[node name="Key" parent="TileMap" index="3" instance=ExtResource( 4 )]
+position = Vector2( 344, 72 )
+
+[node name="Exit" parent="TileMap" index="4" instance=ExtResource( 5 )]
+position = Vector2( 268, 208 )
+
+[node name="Player" parent="TileMap" index="5" instance=ExtResource( 6 )]
+position = Vector2( 232, 216 )
+
+[node name="Spikes" parent="TileMap" index="6" instance=ExtResource( 7 )]
+position = Vector2( 200, 236 )
+
+[node name="Spikes2" parent="TileMap" index="7" instance=ExtResource( 7 )]
+position = Vector2( 216, 236 )
+
+[node name="Spikes3" parent="TileMap" index="8" instance=ExtResource( 7 )]
+position = Vector2( 296, 236 )
+
+[node name="Spikes4" parent="TileMap" index="9" instance=ExtResource( 7 )]
+position = Vector2( 312, 236 )
+
+[node name="Spikes5" parent="TileMap" index="10" instance=ExtResource( 7 )]
+position = Vector2( 296, 140 )
+
+[node name="Spikes6" parent="TileMap" index="11" instance=ExtResource( 7 )]
+position = Vector2( 232, 116 )
+rotation = 3.14159
+
