@@ -9,3 +9,7 @@ Controls:
 <br><kb>Spacebar</kb> - Jump
 
 This games is fast-placed and may not suit for all players though.
+
+## Where to play
+
+Executables are hosted on GitHub pages under `/docs` subdirectory. You can visit [this page directly](https://lethiandev.github.io/hen-misadventures/) to play the game in your browser.
