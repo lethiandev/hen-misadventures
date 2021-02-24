@@ -6,6 +6,11 @@ signal fade_in_ended()
 signal fade_out_started()
 signal fade_out_ended()
 
+func _process(delta):
+	if Input.is_action_just_pressed("ui_accept"):
+		$VBoxContainer/TitleLabel.skip()
+		$VBoxContainer/HintLabel.skip()
+
 func level_introduce(title, hint, origin = Vector2(), fade_in = true):
 	$VBoxContainer.show()
 	

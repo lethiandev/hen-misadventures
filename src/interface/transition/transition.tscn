@@ -60,4 +60,3 @@ stream = ExtResource( 6 )
 volume_db = -12.0
 
 [node name="Tween" type="Tween" parent="VBoxContainer/HintLabel"]
-

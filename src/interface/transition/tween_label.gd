@@ -15,6 +15,13 @@ func start_tween():
 	$Tween.start()
 	return $Tween
 
+func skip():
+	var time_frame = tween_duration + tween_delay
+	if $Tween.tell() < time_frame:
+		# Seek tween just right before the end
+		# Workaround for emitting tween_completed signal
+		$Tween.seek(time_frame - 0.001)
+
 func _interpolate_visible_chars(value):
 	visible_characters = int(value * text.length())
 	
