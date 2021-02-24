@@ -54,6 +54,7 @@ func _jump(delta):
 	
 	if Input.is_action_just_pressed("ui_select") and can_jump:
 		linear_velocity = -Vector2(0, JUMP_STRENGTH + FALL_SPEED * delta)
+		$JumpStreamPlayer.play()
 		if not floor_frames:
 			air_jumps_left -= 1
 		floor_frames = 0
@@ -73,7 +74,7 @@ func kill():
 	$AnimationPlayer.play("dead")
 	freeze()
 	
-	$AudioStreamPlayer.play()
+	$HitStreamPlayer.play()
 	
 	Transition.fade_out(global_position)
 	yield(Transition, "fade_out_ended")
