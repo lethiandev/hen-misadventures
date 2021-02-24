@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://levels/level_base/level_base.tscn" type="PackedScene" id=1]
 [ext_resource path="res://levels/intro/intro.gd" type="Script" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://tilesets/fields/fields.tres" type="TileSet" id=6]
 [ext_resource path="res://player/player.tscn" type="PackedScene" id=7]
 [ext_resource path="res://player/player.png" type="Texture" id=8]
+[ext_resource path="res://interface/fonts/emulogic_16.tres" type="DynamicFont" id=9]
 
 [sub_resource type="Curve2D" id=1]
 _data = {
@@ -408,7 +409,25 @@ title = "Somewhere in countryside"
 hint = "Midnight"
 next_level = "res://levels/level1/level1.tscn"
 
-[node name="Path2D" type="Path2D" parent="." index="0"]
+[node name="Interface" type="CanvasLayer" parent="." index="0"]
+layer = 0
+
+[node name="SkipIntroHint" type="Label" parent="Interface" index="0"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 16.0
+margin_top = 16.0
+margin_right = -16.0
+margin_bottom = -16.0
+custom_fonts/font = ExtResource( 9 )
+text = "SPACE BAR TO SKIP"
+align = 2
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Path2D" type="Path2D" parent="." index="1"]
 position = Vector2( 0, -31 )
 curve = SubResource( 1 )
 
@@ -425,7 +444,7 @@ monitoring = false
 monitorable = false
 length = 50.0
 
-[node name="Eggs" type="Node2D" parent="." index="1"]
+[node name="Eggs" type="Node2D" parent="." index="2"]
 position = Vector2( 256, 113 )
 
 [node name="Egg1" type="Sprite" parent="Eggs" index="0"]
@@ -464,7 +483,7 @@ texture = ExtResource( 5 )
 position = Vector2( 5, 54 )
 texture = ExtResource( 5 )
 
-[node name="TileMap" parent="." index="2"]
+[node name="TileMap" parent="." index="3"]
 tile_set = ExtResource( 6 )
 tile_data = PoolIntArray( 655373, 1, 0, 655375, 3, 0, 655376, 3, 0, 655377, 536870913, 0, 720909, 5, 0, 720911, 536870916, 0, 720914, 536870917, 0, 786445, 5, 0, 786450, 536870917, 0, 851976, 0, 0, 851977, 0, 0, 851978, 0, 0, 851979, 0, 0, 851980, 0, 0, 851981, 0, 0, 851982, 0, 0, 851983, 0, 0, 851984, 0, 0, 851985, 0, 0, 851986, 0, 0, 851987, 0, 0, 851988, 0, 0, 851989, 0, 0, 851990, 0, 0, 851991, 0, 0 )
 
@@ -472,7 +491,7 @@ tile_data = PoolIntArray( 655373, 1, 0, 655375, 3, 0, 655376, 3, 0, 655377, 5368
 visible = false
 position = Vector2( 248, 183 )
 
-[node name="Hens" type="Node2D" parent="." index="3"]
+[node name="Hens" type="Node2D" parent="." index="4"]
 
 [node name="Hen1" type="Sprite" parent="Hens" index="0"]
 visible = false
@@ -501,5 +520,5 @@ texture = ExtResource( 8 )
 flip_h = true
 hframes = 4
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="5"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="6"]
 anims/intro = SubResource( 2 )
