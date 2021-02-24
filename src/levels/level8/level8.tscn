@@ -10,7 +10,7 @@
 
 [node name="Level8" instance=ExtResource( 1 )]
 title = "Alien Laboratory #6"
-hint = "It's getting harder tho"
+hint = "It's getting more challenging too!"
 next_level = "res://levels/level9/level9.tscn"
 
 [node name="TileMap" parent="." index="0"]
@@ -80,4 +80,3 @@ rotation = -7.85398
 [node name="Spikes14" parent="TileMap" index="17" instance=ExtResource( 7 )]
 position = Vector2( 236, 92 )
 rotation = -7.85398
-

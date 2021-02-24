@@ -10,7 +10,7 @@
 
 [node name="LevelBase" instance=ExtResource( 1 )]
 title = "Alien Laboratory #1"
-hint = "Avoid touching spikes"
+hint = "Avoid touching deadly spikes"
 next_level = "res://levels/level4/level4.tscn"
 
 [node name="TileMap" parent="." index="0"]
@@ -34,4 +34,3 @@ position = Vector2( 195, 204 )
 
 [node name="Spikes2" parent="TileMap" index="5" instance=ExtResource( 7 )]
 position = Vector2( 319, 204 )
-

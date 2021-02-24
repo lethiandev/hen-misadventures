@@ -9,7 +9,7 @@
 [ext_resource path="res://player/player.tscn" type="PackedScene" id=7]
 [ext_resource path="res://aliens/spikes/spikes.tscn" type="PackedScene" id=8]
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=1]
 resource_name = "loop"
 length = 2.0
 loop = true
@@ -38,7 +38,7 @@ tracks/1/keys = {
 "values": [ true, false ]
 }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=2]
 resource_name = "loop"
 length = 2.0
 loop = true
@@ -55,8 +55,7 @@ tracks/0/keys = {
 "values": [ true, false ]
 }
 
-[sub_resource type="Animation" id=1]
-resource_name = "spikes"
+[sub_resource type="Animation" id=3]
 length = 1.5
 loop = true
 tracks/0/type = "value"
@@ -100,7 +99,7 @@ is_enabled = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="TileMap/Laser" index="4"]
 autoplay = "loop"
-anims/loop = SubResource( 2 )
+anims/loop = SubResource( 1 )
 
 [node name="Laser2" parent="TileMap" index="1" instance=ExtResource( 3 )]
 show_behind_parent = true
@@ -110,7 +109,7 @@ is_enabled = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="TileMap/Laser2" index="4"]
 autoplay = "loop"
-anims/loop = SubResource( 3 )
+anims/loop = SubResource( 2 )
 
 [node name="Egg" parent="TileMap" index="2" instance=ExtResource( 4 )]
 position = Vector2( 276, 103 )
@@ -170,5 +169,4 @@ rotation = -1.5708
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="TileMap/Trap" index="2"]
 autoplay = "spikes"
-anims/spikes = SubResource( 1 )
-
+anims/spikes = SubResource( 3 )

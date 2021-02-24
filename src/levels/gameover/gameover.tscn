@@ -6,5 +6,5 @@
 [node name="GameOver" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 title = "Game Over"
-hint = "Press spacebar to play again"
+hint = "Press space bar to play again"
 next_level = "res://levels/level1/level1.tscn"

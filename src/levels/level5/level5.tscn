@@ -62,4 +62,3 @@ position = Vector2( 376, 172 )
 
 [node name="Spikes10" parent="TileMap" index="14" instance=ExtResource( 7 )]
 position = Vector2( 392, 172 )
-

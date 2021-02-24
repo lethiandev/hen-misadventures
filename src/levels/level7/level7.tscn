@@ -10,7 +10,7 @@
 
 [node name="Level7" instance=ExtResource( 1 )]
 title = "Alien Laboratory #5"
-hint = "Collect eggs as much as you can"
+hint = "Collect eggs as many as you can"
 next_level = "res://levels/level8/level8.tscn"
 
 [node name="TileMap" parent="." index="0"]
@@ -84,4 +84,3 @@ rotation = 3.14159
 [node name="Spikes16" parent="TileMap" index="21" instance=ExtResource( 7 )]
 position = Vector2( 264, 116 )
 rotation = 3.14159
-

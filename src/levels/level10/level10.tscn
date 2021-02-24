@@ -79,7 +79,7 @@ tracks/0/keys = {
 
 [node name="Level10" instance=ExtResource( 1 )]
 title = "Alien Laboratory #8"
-hint = "More laser beams! Woah!"
+hint = "More laser beams! Watch out!"
 next_level = "res://levels/level11/level11.tscn"
 
 [node name="TileMap" parent="." index="0"]
@@ -88,7 +88,6 @@ tile_set = ExtResource( 2 )
 tile_data = PoolIntArray( 65544, 0, 65537, 65545, 0, 65537, 65546, 0, 65537, 65547, 0, 65537, 65548, 0, 196613, 65549, 0, 131073, 65550, 0, 131073, 65551, 0, 196612, 65552, 0, 65537, 65553, 0, 65537, 65554, 0, 65537, 65555, 0, 65537, 65556, 0, 196613, 65557, 0, 131073, 65558, 0, 131073, 65559, 0, 196612, 131080, 0, 196613, 131081, 0, 131073, 131082, 0, 131073, 131083, 0, 131073, 131084, 0, 131074, 131087, 0, 131072, 131088, 0, 131073, 131089, 0, 131073, 131090, 0, 131073, 131091, 0, 131073, 131092, 0, 131074, 131095, 0, 65536, 196616, 0, 65538, 196631, 0, 65536, 262152, 0, 65538, 262167, 0, 65536, 327688, 0, 65538, 327691, 0, 0, 327692, 0, 2, 327695, 0, 0, 327696, 0, 2, 327703, 0, 65536, 393224, 0, 65538, 393227, 0, 65536, 393228, 0, 65538, 393231, 0, 65536, 393232, 0, 65538, 393239, 0, 65536, 458760, 0, 65538, 458763, 0, 131072, 458764, 0, 131074, 458767, 0, 131072, 458768, 0, 131074, 458775, 0, 65536, 524296, 0, 65538, 524311, 0, 65536, 589832, 0, 65538, 589847, 0, 65536, 655368, 0, 65538, 655379, 0, 0, 655380, 0, 2, 655383, 0, 65536, 720904, 0, 65538, 720915, 0, 65536, 720916, 0, 65538, 720919, 0, 65536, 786440, 0, 65538, 786451, 0, 65536, 786452, 0, 65538, 786455, 0, 65536, 851976, 0, 65538, 851979, 0, 0, 851980, 0, 2, 851983, 0, 0, 851984, 0, 2, 851987, 0, 65536, 851988, 0, 65538, 851991, 0, 65536, 917512, 0, 65538, 917515, 0, 65536, 917516, 0, 65538, 917519, 0, 65536, 917520, 0, 65538, 917523, 0, 65536, 917524, 0, 65538, 917527, 0, 65536, 983048, 0, 131077, 983049, 0, 1, 983050, 0, 1, 983051, 0, 131076, 983052, 0, 131077, 983053, 0, 1, 983054, 0, 1, 983055, 0, 131076, 983056, 0, 131077, 983057, 0, 1, 983058, 0, 1, 983059, 0, 131076, 983060, 0, 131077, 983061, 0, 1, 983062, 0, 1, 983063, 0, 131076 )
 
 [node name="Laser" parent="TileMap" index="0" instance=ExtResource( 3 )]
-editor/display_folded = true
 show_behind_parent = true
 position = Vector2( 160, 236 )
 rotation = -3.14159
@@ -99,7 +98,6 @@ autoplay = "loop"
 anims/loop = SubResource( 1 )
 
 [node name="Laser2" parent="TileMap" index="1" instance=ExtResource( 3 )]
-editor/display_folded = true
 show_behind_parent = true
 position = Vector2( 224, 36 )
 is_enabled = true
@@ -109,7 +107,6 @@ autoplay = "loop"
 anims/loop = SubResource( 2 )
 
 [node name="Laser3" parent="TileMap" index="2" instance=ExtResource( 3 )]
-editor/display_folded = true
 show_behind_parent = true
 position = Vector2( 288, 236 )
 rotation = -3.14159
@@ -120,7 +117,6 @@ autoplay = "loop"
 anims/loop = SubResource( 3 )
 
 [node name="Laser4" parent="TileMap" index="3" instance=ExtResource( 3 )]
-editor/display_folded = true
 show_behind_parent = true
 position = Vector2( 352, 36 )
 rotation = -6.28319
@@ -171,4 +167,3 @@ rotation = -4.71239
 [node name="Spikes5" parent="TileMap" index="15" instance=ExtResource( 8 )]
 position = Vector2( 172, 116 )
 rotation = -7.85398
-
